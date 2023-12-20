@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {FaBars, FaTimes} from 'react-icons/fa'
-import { Container,Nav,NavLink } from './Header.styles';
+import { Container,Nav,NavLink,NavTitle } from './Header.styles';
 
 const Header: React.FC = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -12,9 +12,11 @@ const Header: React.FC = () => {
 
   return (
     <Container>
-    <h3>
+
+    <NavTitle>
         Matheus dos Reis
-    </h3>
+    </NavTitle>
+    
     <Nav isOpen={isNavOpen} as="div">
         <NavLink href="#">Inicio</NavLink>
         <NavLink href="#">Sobre</NavLink>

@@ -6,10 +6,12 @@ export const Container = styled.div`
   background: #341d08;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   height: 80px;
   padding: 2rem;
   color: #f7f2ee;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
 
   &.responsive_nav {
     transform:none;
@@ -34,10 +36,17 @@ export const Nav = styled.nav<{isOpen:boolean}>`
     transition: 1s;
     transform: translateY(${(props) => (props.isOpen ? '0' : '-100vh')});
     }
-`
+`;
 
 
 export const NavLink = styled.a`
 margin: 0 2rem;
 color: #f7f2ee;
+font-weight: bolder;
+font-size: 20px;
+`;
+
+export const NavTitle = styled.h3`
+  font-size: 30px;
+  font-weight: bolder;
 `
