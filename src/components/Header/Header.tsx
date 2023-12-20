@@ -1,14 +1,13 @@
-import React from 'react';
-import { useRef } from 'react';
+import React, { useState } from 'react';
 import {FaBars, FaTimes} from 'react-icons/fa'
-import { Container } from './Header.styles';
+import { Container,Nav,NavLink } from './Header.styles';
 
 const Header: React.FC = () => {
-    const navRef = useRef<HTMLDivElement | null>(null);
-    
-    const showNavBar = () =>{
-        navRef.current.classList.toggle("responsive_nav")
-    }
+    const [isNavOpen, setIsNavOpen] = useState(false);
+
+    const toggleNavBar = () => {
+      setIsNavOpen(!isNavOpen);
+    };
 
 
   return (
@@ -16,17 +15,17 @@ const Header: React.FC = () => {
     <h3>
         Matheus dos Reis
     </h3>
-    <nav ref={navRef}>
-        <a href="#">Inicio</a>
-        <a href="#">Sobre</a>
-        <a href="#">Projetos</a>
-        <a href="#">Contatos</a>
-        <button className='nav-btn nav-close-btn' onClick={showNavBar}>
+    <Nav isOpen={isNavOpen} as="div">
+        <NavLink href="#">Inicio</NavLink>
+        <NavLink href="#">Sobre</NavLink>
+        <NavLink href="#">Projetos</NavLink>
+        <NavLink href="#">Contatos</NavLink>
+        <button className='nav-btn nav-close-btn' onClick={toggleNavBar}>
             <FaTimes/>
         </button>
-    </nav>
+    </Nav>
 
-    <button className='nav-btn' onClick={showNavBar}>
+    <button className='nav-btn' onClick={toggleNavBar}>
             <FaBars/>
     </button>
 
