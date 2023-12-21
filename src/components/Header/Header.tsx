@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {FaBars, FaTimes} from 'react-icons/fa'
-import { Container,Nav,NavTitle } from './Header.styles';
+import { Container,Nav,NavTitle,SLink } from './Header.styles';
 import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
@@ -19,10 +19,10 @@ const Header: React.FC = () => {
     </NavTitle>
     
     <Nav isOpen={isNavOpen} as="div">
-        <Link to="/">Inicio</Link>
-        <Link to="/sobre">Sobre</Link>
-        <Link to="/projetos">Projetos</Link>
-        <Link to="/contatos">Contatos</Link>
+        <SLink to="/">Inicio</SLink>
+        <SLink to="/sobre">Sobre</SLink>
+        <SLink to="/projetos">Projetos</SLink>
+        <SLink to="/contatos">Contatos</SLink>
         <button className='nav-btn nav-close-btn' onClick={toggleNavBar}>
             <FaTimes/>
         </button>
