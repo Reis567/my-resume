@@ -15,7 +15,9 @@ const Header: React.FC = () => {
     <Container>
 
     <NavTitle>
+      <Link to={"/"}>
         Matheus dos Reis
+      </Link>
     </NavTitle>
     
     <Nav isOpen={isNavOpen} as="div">
