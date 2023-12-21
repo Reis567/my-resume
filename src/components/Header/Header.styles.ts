@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 
@@ -39,7 +40,7 @@ export const Nav = styled.nav<{isOpen:boolean}>`
 `;
 
 
-export const NavLink = styled.a`
+export const SLink = styled(Link)`
 margin: 0 2rem;
 color: #f7f2ee;
 font-weight: bolder;
