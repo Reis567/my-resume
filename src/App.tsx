@@ -1,6 +1,6 @@
 import './App.css'
-import AppRoute from './AppRoutes'
 import Header from './components/Header/Header'
+import { Outlet } from 'react-router-dom'
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Header/>
-      <AppRoute/>
+      <Outlet/>
     </>
 
   )

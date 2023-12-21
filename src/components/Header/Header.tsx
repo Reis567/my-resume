@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {FaBars, FaTimes} from 'react-icons/fa'
-import { Container,Nav,NavLink,NavTitle } from './Header.styles';
+import { Container,Nav,NavTitle } from './Header.styles';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -18,10 +19,10 @@ const Header: React.FC = () => {
     </NavTitle>
     
     <Nav isOpen={isNavOpen} as="div">
-        <NavLink href="#">Inicio</NavLink>
-        <NavLink href="#">Sobre</NavLink>
-        <NavLink href="#">Projetos</NavLink>
-        <NavLink href="#">Contatos</NavLink>
+        <Link to="/">Inicio</Link>
+        <Link to="/sobre">Sobre</Link>
+        <Link to="/projetos">Projetos</Link>
+        <Link to="/contatos">Contatos</Link>
         <button className='nav-btn nav-close-btn' onClick={toggleNavBar}>
             <FaTimes/>
         </button>
