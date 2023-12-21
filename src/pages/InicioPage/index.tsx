@@ -1,4 +1,5 @@
 import React from 'react';
+import { SButton } from '@/components/Buttons/SButton';
 
 const curriculoPdfUrl = '/curriculos/curriculo.pdf';
 const resumePdfUrl = '/curriculos/resume.pdf';
@@ -16,12 +17,12 @@ const Inicio: React.FC = () => {
   return (
     <div>
       <h2>Matheus dos Reis</h2>
-      <button onClick={() => handleDownloadCurriculo(curriculoPdfUrl, 'curriculo.pdf')}>
+      <SButton onClick={() => handleDownloadCurriculo(curriculoPdfUrl, 'curriculo.pdf')}>
         Baixar Currículo
-      </button>
-      <button onClick={() => handleDownloadCurriculo(resumePdfUrl, 'resume.pdf')}>
+      </SButton>
+      <SButton onClick={() => handleDownloadCurriculo(resumePdfUrl, 'resume.pdf')}>
         Download Resume
-      </button>
+      </SButton>
     </div>
   );
 };
