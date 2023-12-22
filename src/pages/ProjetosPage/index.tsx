@@ -1,10 +1,11 @@
 import React from 'react';
+import { SProjetos } from './index.style';
 
 const Projetos: React.FC = () => {
   return (
-    <div>
+    <SProjetos>
       <h2>Matheus dos reis</h2>
-    </div>
+    </SProjetos>
   );
 };
 
