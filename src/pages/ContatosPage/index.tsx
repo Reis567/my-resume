@@ -1,10 +1,10 @@
 import React from 'react';
-import { SContatos } from './index.style';
+import { SContatos, STitle } from './index.style';
 
 const Contatos: React.FC = () => {
   return (
     <SContatos>
-      <h2>Contatos</h2>
+      <STitle>Contatos</STitle>
     </SContatos>
   );
 };

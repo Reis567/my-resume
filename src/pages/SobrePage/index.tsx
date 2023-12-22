@@ -1,10 +1,10 @@
 import React from 'react';
-import { SSobre } from './index.style';
+import { SSobre, STitle } from './index.style';
 
 const Sobre: React.FC = () => {
   return (
     <SSobre>
-      <h2>Matheus dos reis</h2>
+      <STitle>Matheus dos reis</STitle>
     </SSobre>
   );
 };
