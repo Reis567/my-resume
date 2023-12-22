@@ -1,6 +1,6 @@
 import React from 'react';
 import { SButton } from '@/components/Buttons/SButton';
-import { SDivImg, STitle1,STitle2,STitle3, Simg } from './index.style';
+import { SDivImg, SInicio, STitle1,STitle2,STitle3, Simg,SDivTitle,SDivButton } from './index.style';
 
 const curriculoPdfUrl = '/curriculos/curriculo.pdf';
 const resumePdfUrl = '/curriculos/resume.pdf';
@@ -16,27 +16,36 @@ const Inicio: React.FC = () => {
   };
 
   return (
-    <div>
+      <SInicio>
+        <SDivTitle>
 
-      <STitle1>Olá , sou</STitle1>
+        <STitle1>Olá , sou</STitle1>
 
-      <STitle2>Matheus dos Reis</STitle2>
+        <STitle2>Matheus dos Reis</STitle2>
 
-      <STitle3>Um Web Developer</STitle3>
-      
-      <SButton onClick={() => handleDownloadCurriculo(curriculoPdfUrl, 'curriculo.pdf')}>
-        Baixar Currículo
-      </SButton>
-      <SButton onClick={() => handleDownloadCurriculo(resumePdfUrl, 'resume.pdf')}>
-        Download Resume
-      </SButton>
+        <STitle3>Um Web Developer</STitle3>
+
+        <SDivButton>
+
+          <SButton onClick={() => handleDownloadCurriculo(curriculoPdfUrl, 'curriculo.pdf')}>
+            Baixar Currículo
+          </SButton>
+          <SButton onClick={() => handleDownloadCurriculo(resumePdfUrl, 'resume.pdf')}>
+            Download Resume
+          </SButton>
+          
+        </SDivButton>
+
+        </SDivTitle>
 
 
 
-      <SDivImg>
-        <Simg src='/imgs/desenho.png'/>
-      </SDivImg>
-    </div>
+        <SDivImg>
+          <Simg src='/imgs/desenho.png'/>
+        </SDivImg>
+
+      </SInicio>
+
   );
 };
 

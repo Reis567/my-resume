@@ -5,6 +5,7 @@ export const Simg = styled.img`
     max-width: 100%;
 `
 export const SDivImg = styled.div`
+    margin-top:150px;
     max-height:500px;
     height:500px;
     width:380px;
@@ -19,6 +20,18 @@ export const SDivImg = styled.div`
         border:10px solid #f7f2ee;
     }
 `
+export const SDivTitle = styled.div`
+    margin-top:150px;
+`
+
+export const SDivButton = styled.div`
+    margin-top:50px;
+    Button{
+        margin-inline: 20px;
+        font-weight:bolder;
+    }
+`
+
 
 export const STitle1 = styled.h2`
   font-size : 25px;
@@ -32,4 +45,11 @@ export const STitle2 = styled.h2`
 export const STitle3 = styled.h2`
       font-size : 25px;
   font-weight: bolder;
+`
+
+export const SInicio = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
 `
