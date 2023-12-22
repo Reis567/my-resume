@@ -34,16 +34,16 @@ export const SDivButton = styled.div`
 
 
 export const STitle1 = styled.h2`
-  font-size : 25px;
+  font-size : 35px;
   font-weight: bolder;
 `
 
 export const STitle2 = styled.h2`
-    font-size : 65px;
+    font-size : 90px;
   font-weight: bolder;
 `
 export const STitle3 = styled.h2`
-      font-size : 25px;
+      font-size : 40px;
   font-weight: bolder;
 `
 
