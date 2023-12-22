@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const SContatos = styled.div`
     min-height: 100vh;
     text-align:center;
+    margin-block: 30px;
 `
 
 export const STitle = styled.h2`
