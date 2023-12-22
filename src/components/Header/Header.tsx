@@ -21,10 +21,10 @@ const Header: React.FC = () => {
     </NavTitle>
     
     <Nav isOpen={isNavOpen} as="div">
-        <SLink to="/">Inicio</SLink>
-        <SLink to="/sobre">Sobre</SLink>
-        <SLink to="/projetos">Projetos</SLink>
-        <SLink to="/contatos">Contatos</SLink>
+        <SLink to="/" onClick={toggleNavBar}>Inicio</SLink>
+        <SLink to="/sobre" onClick={toggleNavBar}>Sobre</SLink>
+        <SLink to="/projetos" onClick={toggleNavBar}>Projetos</SLink>
+        <SLink to="/contatos" onClick={toggleNavBar}>Contatos</SLink>
         <button className='nav-btn nav-close-btn' onClick={toggleNavBar}>
             <FaTimes/>
         </button>
