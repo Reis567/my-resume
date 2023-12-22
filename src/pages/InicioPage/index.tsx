@@ -1,6 +1,6 @@
 import React from 'react';
 import { SButton } from '@/components/Buttons/SButton';
-import { STitle1,STitle2,STitle3 } from './index.style';
+import { SDivImg, STitle1,STitle2,STitle3, Simg } from './index.style';
 
 const curriculoPdfUrl = '/curriculos/curriculo.pdf';
 const resumePdfUrl = '/curriculos/resume.pdf';
@@ -30,6 +30,12 @@ const Inicio: React.FC = () => {
       <SButton onClick={() => handleDownloadCurriculo(resumePdfUrl, 'resume.pdf')}>
         Download Resume
       </SButton>
+
+
+
+      <SDivImg>
+        <Simg src='/imgs/desenho.png'/>
+      </SDivImg>
     </div>
   );
 };

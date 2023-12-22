@@ -7,6 +7,9 @@
   --black:#000000;
   --brown:#341d08;
 }
+#root {
+  min-height: 100vh;
+}
 
 .nav-btn{
   visibility: hidden;
