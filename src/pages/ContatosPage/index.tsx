@@ -1,10 +1,11 @@
 import React from 'react';
+import { SContatos } from './index.style';
 
 const Contatos: React.FC = () => {
   return (
-    <div>
-      <h2>Matheus dos reiscontatos</h2>
-    </div>
+    <SContatos>
+      <h2>Contatos</h2>
+    </SContatos>
   );
 };
 
