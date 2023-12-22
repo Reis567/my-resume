@@ -1,5 +1,6 @@
 import React from 'react';
 import { SButton } from '@/components/Buttons/SButton';
+import { STitle1,STitle2,STitle3 } from './index.style';
 
 const curriculoPdfUrl = '/curriculos/curriculo.pdf';
 const resumePdfUrl = '/curriculos/resume.pdf';
@@ -16,7 +17,13 @@ const Inicio: React.FC = () => {
 
   return (
     <div>
-      <h2>Matheus dos Reis</h2>
+
+      <STitle1>Olá , sou</STitle1>
+
+      <STitle2>Matheus dos Reis</STitle2>
+
+      <STitle3>Um Web Developer</STitle3>
+      
       <SButton onClick={() => handleDownloadCurriculo(curriculoPdfUrl, 'curriculo.pdf')}>
         Baixar Currículo
       </SButton>
