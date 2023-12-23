@@ -8,6 +8,7 @@ import {
   export const STitle = styled.h2`
   font-size : 90px;
   font-weight: bolder;
+  margin-block: 30px;
 `
 
 export const SProjetos = styled.div`
@@ -29,7 +30,7 @@ export const SCards = styled.div`
 export const SCard = styled(Card)`
     max-width:350px;
     border:3px solid #341d08;
-    padding: 5px;
+    padding: 10px;
     `
 export const SContent = styled(CardContent)`
     width: 100%;
