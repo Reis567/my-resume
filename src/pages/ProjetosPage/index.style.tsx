@@ -15,7 +15,6 @@ export const SProjetos = styled.div`
     min-height: 100vh;
     text-align: center;
     margin-bottom:60px;
-    margin-left:10px;
         .Btn-vermais{
             margin-top:50px;
     }
@@ -24,13 +23,14 @@ export const SCards = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    margin-left:40px;
 `
 
 
 export const SCard = styled(Card)`
-    max-width:350px;
+    max-width:380px;
     border:3px solid #341d08;
-    padding: 10px;
+    padding: 15px;
     `
 export const SContent = styled(CardContent)`
     width: 100%;
