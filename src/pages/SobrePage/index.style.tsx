@@ -28,7 +28,7 @@ align-items: center;
 flex-direction: column;
 margin-bottom: 90px;
   h2{
-    font-size:60px; 
+    font-size:80px; 
   }
 `
 export const SBText = styled.p`
@@ -64,6 +64,7 @@ width: 100%;
 export const SName = styled.h3`
 font-size: 50px;
 margin-right: 5px;
+font-weight: 600;
 `
 
 export const StarIcon = styled(FaStar)`
