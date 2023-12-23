@@ -3,7 +3,9 @@ import styled from "styled-components";
 export const SContatos = styled.div`
     min-height: 100vh;
     text-align:center;
-    margin-block: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 `
 
 export const STitle = styled.h2`
@@ -18,7 +20,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 gap: 30px;
-
+margin-bottom:50px;
 `
 export const LinkIcon = styled.div`
 padding: 15px;
