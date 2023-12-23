@@ -12,9 +12,11 @@ const techIcons: TechIcons = {
   CSS3: 'devicon-css3-plain',
   JavaScript: 'devicon-javascript-plain',
   Bootstrap: 'devicon-bootstrap-plain',
-  'Tailwind CSS': 'devicon-tailwindcss-plain',
+  'Tailwind': 'devicon-tailwindcss-plain',
   React: 'devicon-react-plain',
-  'Node.js': 'devicon-nodejs-plain',
+  'Node': 'devicon-nodejs-plain',
+  Docker:'devicon-docker-plain',
+  Typescript:'devicon-typescript-plain',
 };
 
 const Projetos: React.FC = () => {
@@ -58,7 +60,7 @@ const Projetos: React.FC = () => {
     {
       title: 'Marketplace',
       description: 'Marketplace com login e cadastro de usuários, além de comunicação entre vendedor e comprador',
-      technologies: ['Python', 'Django', 'Tailwind CSS', 'HTML5', 'CSS3', 'JavaScript'],
+      technologies: ['Python', 'Django', 'Tailwind', 'HTML5', 'CSS3', 'JavaScript'],
       image: '/projetos/marketplace.PNG',
       githubLink: 'https://github.com/Reis567/marketplace-django',
     },
@@ -83,6 +85,21 @@ const Projetos: React.FC = () => {
       image: '/projetos/home.PNG',
       githubLink: 'https://github.com/Reis567/ecommerce-django',
     },
+
+    {
+      title: 'API Node',
+      description: 'Api Node.js para gerênciamento de um banco de dados contendo cidades e moradores , com autenticação de usuários',
+      technologies: ['Node','Typescript','PostgreSQL'],
+      image: '/projetos/apiNode.png',
+      githubLink: 'https://github.com/Reis567/node-people-register',
+    },
+    {
+      title: 'CRUD de contatos em React',
+      description: 'CRUD de contatos em React, com opção de diversos filtros e estatísticas',
+      technologies: ['React', 'HTML5', 'CSS3', 'JavaScript', 'Tailwind'],
+      image: '/projetos/leste.JPG',
+      githubLink: 'https://github.com/Reis567/lestereact2',
+    },
     {
       title: 'Landing page de Provedor de internet',
       description: 'Landing page de Provedor de internet',
@@ -90,13 +107,7 @@ const Projetos: React.FC = () => {
       image: '/projetos/lpprice.PNG',
       githubLink: 'https://codepen.io/reis567/pen/PoXpxed',
     },
-    {
-      title: 'Sessão de contact us',
-      description: 'Sessão de contact us',
-      technologies: ['HTML5', 'CSS3'],
-      image: '/projetos/contactus.PNG',
-      githubLink: 'https://codepen.io/reis567/pen/bGQXezB',
-    },
+
     {
       title: 'Aplicativo web de pesquisa de imagens',
       description: 'Aplicativo web de pesquisa de imagens',
@@ -104,13 +115,7 @@ const Projetos: React.FC = () => {
       image: '/projetos/pesquisaimg.PNG',
       githubLink: 'https://codepen.io/reis567/pen/yLGywjB',
     },
-    {
-      title: 'CRUD de contatos em React',
-      description: 'CRUD de contatos em React, com opção de diversos filtros e estatísticas',
-      technologies: ['React', 'HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS'],
-      image: '/projetos/leste.JPG',
-      githubLink: 'https://github.com/Reis567/lestereact2',
-    },
+
     {
       title: 'Pagina de Login e Registro',
       description: 'Pagina de Login e Registro',
@@ -134,9 +139,11 @@ const Projetos: React.FC = () => {
   };
 
   const redirectToGitHub = (githubLink: string) => {
-    window.location.href = githubLink;
+    window.open(githubLink, '_blank');
   };
-
+  const redirectToGitHubProfile = () => {
+    window.open('https://github.com/Reis567', '_blank');
+  };
   
 
   return (
@@ -158,6 +165,9 @@ const Projetos: React.FC = () => {
           </SCard>
         ))}
       </SCards>
+      <SButton className='Btn-vermais' onClick={redirectToGitHubProfile}>
+      Ver mais
+    </SButton>
     </SProjetos>
   );
 };

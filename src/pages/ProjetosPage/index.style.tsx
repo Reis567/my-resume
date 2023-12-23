@@ -13,8 +13,11 @@ import {
 export const SProjetos = styled.div`
     min-height: 100vh;
     text-align: center;
-    margin-bottom:100px;
+    margin-bottom:60px;
     margin-left:10px;
+        .Btn-vermais{
+            margin-top:50px;
+    }
 `
 export const SCards = styled.div`
     display: flex;
