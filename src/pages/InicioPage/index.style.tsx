@@ -12,9 +12,10 @@ export const SDivImg = styled.div`
     max-height:500px;
     height:500px;
     width:380px;
+    max-width:380px;
     background:#341d08;
     text-align:center;
-    border-radius:90px;
+    border-radius:430px;
     overflow:hidden;
     border: 10px solid #000000;
     transition:0.3s ease-in-out;
@@ -24,13 +25,27 @@ export const SDivImg = styled.div`
     }
     @media only screen and  (max-width: 425px){
         display: none;
+    }    
+    @media only screen and  (min-width: 426px) and (max-width:1024px){
+        margin-top: 50px;
+        max-height: 400px;
+        display: flex;
+        justify-content:center;
+
     }
+
+
 `
 export const SDivTitle = styled.div`
     margin-top:150px;
     @media only screen and  (max-width: 425px){
         margin-top: 30px;
         padding: 10px;
+    }
+    @media only screen and  (min-width: 426px) and (max-width:1024px){
+        margin-top: 30px;
+        padding: 10px;
+
     }
 `
 
