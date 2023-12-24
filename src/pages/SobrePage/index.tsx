@@ -1,4 +1,4 @@
-import {  StarIcon ,SBText, SBody, SContainer, SList, SName, SSTRONG, SSkills, SSobre, STitle } from './index.style';
+import {  StarIcon ,SBText, SBody, SContainer, SList, SName, SSTRONG, SSkills, SSobre, STitle, EmpStar, Stars } from './index.style';
 import React, { useState } from 'react';
 
 
@@ -41,10 +41,16 @@ const Sobre: React.FC = () => {
           {sortedSkills.map(([tech, score]) => (
             <SContainer key={tech}>
               <SName>{tech}</SName>
-              {/* Renderiza o número de estrelas de acordo com a pontuação */}
-              {Array.from({ length: score }, (_, index) => (
-                <StarIcon key={index} />
+              <Stars>
+
+
+              {/* Renderiza o número de estrelas preenchidas */}
+              {Array.from({ length: 5 }, (_, index) => (
+                <React.Fragment key={index}>
+                  {index < score ? <StarIcon key={index} /> : <EmpStar key={index} />}
+                </React.Fragment>
               ))}
+              </Stars>
             </SContainer>
           ))}
         </SList>

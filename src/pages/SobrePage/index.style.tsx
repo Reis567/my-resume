@@ -59,6 +59,7 @@ margin-block: 5px;
 align-items: center;
 padding:10px;
 width: 100%;
+justify-content: space-between;
 
 `
 export const SName = styled.h3`
@@ -70,4 +71,14 @@ font-weight: 600;
 export const StarIcon = styled(FaStar)`
 font-size: 50px;
 color: #341d08;
+`
+export const EmpStar = styled(FaStar)`
+font-size: 50px;
+color: #d3c4af;
+`
+
+export const Stars = styled.div`
+display: flex;
+flex-wrap: nowrap;
+gap: 10px;
 `
