@@ -14,6 +14,10 @@ export const STitle = styled.h2`
         font-size: 40px;
         margin-block: 15px;
     }
+    @media only screen and  (min-width: 426px) and (max-width:1024px){
+        margin-block: 15px;
+        font-size: 50px;
+    }
 `
 
 export const SBody = styled.div`
@@ -39,6 +43,12 @@ margin-bottom: 90px;
           font-size: 30px;
         }
     }
+    @media only screen and  (min-width: 426px) and (max-width:1024px){
+        h2{
+          font-size: 40px;
+        }
+
+      }
 `
 export const SBText = styled.p`
 font-size: 30px;
@@ -50,6 +60,11 @@ padding: 15px;
         font-size: 15px;
         width: 95%;
         padding:10px;
+    }
+    @media only screen and  (min-width: 426px) and (max-width:1024px){
+        width:95%;
+        font-size: 20px;
+        padding: 15px;
     }
 `
 
@@ -83,14 +98,22 @@ font-weight: 600;
 @media only screen and  (max-width: 425px){
         font-size: 20px;
         }
+@media only screen and  (min-width: 426px) and (max-width:1024px){
+        font-size:30px;
+
+      }
 `
 
 export const StarIcon = styled(FaStar)`
 font-size: 50px;
 color: #341d08;
-@media only screen and  (max-width: 425px){
+  @media only screen and  (max-width: 425px){
         font-size: 20px;
         }
+   @media only screen and  (min-width: 426px) and (max-width:1024px){
+        font-size:30px;
+
+      }
 `
 export const EmpStar = styled(FaStar)`
 font-size: 50px;
@@ -98,6 +121,10 @@ color: #d3c4af;
 @media only screen and  (max-width: 425px){
         font-size: 20px;
         }
+@media only screen and  (min-width: 426px) and (max-width:1024px){
+        font-size:30px;
+
+      }
 `
 
 export const Stars = styled.div`
