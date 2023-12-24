@@ -39,7 +39,7 @@ export const SDivImg = styled.div`
 export const SDivTitle = styled.div`
     margin-top:150px;
     @media only screen and  (max-width: 425px){
-        margin-top: 30px;
+        margin-top: 75px;
         padding: 10px;
     }
     @media only screen and  (min-width: 426px) and (max-width:1024px){
