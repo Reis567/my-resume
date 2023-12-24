@@ -3,6 +3,9 @@ import styled from 'styled-components'
 export const Simg = styled.img`
     max-height:100%;
     max-width: 100%;
+    @media only screen and  (max-width: 425px){
+        display: none;
+    }
 `
 export const SDivImg = styled.div`
     margin-top:150px;
@@ -19,9 +22,16 @@ export const SDivImg = styled.div`
     &:hover{
         border:10px solid #f7f2ee;
     }
+    @media only screen and  (max-width: 425px){
+        display: none;
+    }
 `
 export const SDivTitle = styled.div`
     margin-top:150px;
+    @media only screen and  (max-width: 425px){
+        margin-top: 30px;
+        padding: 10px;
+    }
 `
 
 export const SDivButton = styled.div`
@@ -30,21 +40,39 @@ export const SDivButton = styled.div`
         margin-inline: 20px;
         font-weight:bolder;
     }
+    @media only screen and  (max-width: 425px){
+        margin-top: 20px;
+        display: flex;
+        Button{
+            margin-inline: 1px;
+            
+        }
+    }
+
 `
 
 
 export const STitle1 = styled.h2`
   font-size : 35px;
   font-weight: bolder;
+  @media only screen and  (max-width: 425px){
+        font-size: 25px;
+    }
 `
 
 export const STitle2 = styled.h2`
     font-size : 90px;
   font-weight: bolder;
+  @media only screen and  (max-width: 425px){
+        font-size: 40px;
+    }
 `
 export const STitle3 = styled.h2`
       font-size : 40px;
   font-weight: bolder;
+  @media only screen and  (max-width: 425px){
+        font-size: 27px;
+    }
 `
 
 export const SInicio = styled.div`

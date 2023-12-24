@@ -13,6 +13,7 @@ export const Container = styled.div`
   color: #f7f2ee;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
+  
 
   &.responsive_nav {
     transform:none;
@@ -30,13 +31,15 @@ export const Nav = styled.nav<{isOpen:boolean}>`
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
     gap: 1.5rem;
     background-color: #341d08;
     transition: 1s;
     transform: translateY(${(props) => (props.isOpen ? '0' : '-100vh')});
-    }
+    //display: none;  
+  }
+
 `;
 
 
@@ -50,4 +53,8 @@ font-size: 20px;
 export const NavTitle = styled.h3`
   font-size: 30px;
   font-weight: bolder;
+
+  @media only screen and  (max-width: 425px){
+    font-size: 20px;
+  }
 `

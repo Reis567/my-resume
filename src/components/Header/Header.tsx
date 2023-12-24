@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {FaBars, FaTimes} from 'react-icons/fa'
-import { Container,Nav,NavTitle,SLink } from './Header.styles';
+import { Container,Nav,NavTitle,SLink } from './Header.styles.tsx';
 import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
