@@ -39,7 +39,7 @@ border:1px solid;
 padding: 15px;
 `
 
-export const SSTRONG = styled.strong`
+export const SStrong = styled.strong`
 font-weight: bolder;
 color: #341d08;
 font-weight: bolder;

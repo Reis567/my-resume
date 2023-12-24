@@ -1,4 +1,4 @@
-import {  StarIcon ,SBText, SBody, SContainer, SList, SName, SSTRONG, SSkills, SSobre, STitle, EmpStar, Stars } from './index.style';
+import {  StarIcon ,SBText, SBody, SContainer, SList, SName, SStrong, SSkills, SSobre, STitle, EmpStar, Stars } from './index.style';
 import React, { useState } from 'react';
 
 
@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 
 const Sobre: React.FC = () => {
   // Estado para armazenar as pontuações de cada tecnologia
-  const [skills, setSkills] = useState({
+  const [skills] = useState({
     Django: 4,
     'Django Rest Framework': 3,
     Node: 3,
@@ -28,9 +28,9 @@ const Sobre: React.FC = () => {
 
       <SBody>
         <SBText>
-          Sou um programador com habilidades de <SSTRONG>trabalho em equipe</SSTRONG>, amor por <SSTRONG>aprendizado</SSTRONG>, facilidade de <SSTRONG>adaptação</SSTRONG> e <SSTRONG>ambicioso.</SSTRONG>
+          Sou um programador com habilidades de <SStrong>trabalho em equipe</SStrong>, amor por <SStrong>aprendizado</SStrong>, facilidade de <SStrong>adaptação</SStrong> e <SStrong>ambicioso.</SStrong>
           <br />
-          Desenvolvo sistemas <SSTRONG>Full stack</SSTRONG> e tenho noções de criação de ambientes de desenvolvimento com <SSTRONG>Docker</SSTRONG>
+          Desenvolvo sistemas <SStrong>Full stack</SStrong> e tenho noções de criação de ambientes de desenvolvimento com <SStrong>Docker</SStrong>
         </SBText>
       </SBody>
 
