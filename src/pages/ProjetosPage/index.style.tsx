@@ -29,16 +29,9 @@ export const SProjetos = styled.div`
 `
 export const SCards = styled.div`
     display: flex;
+justify-content:center;
     flex-wrap: wrap;
     gap: 30px;
-    margin-left:40px;
-    @media only screen and  (max-width: 425px){
-        margin-left:0;
-    }
-    @media only screen and  (max-width: 425px){
-        margin-left:0;
-    }
-
 `
 
 
@@ -48,11 +41,11 @@ export const SCard = styled(Card)`
     padding: 15px;
     @media only screen and  (max-width: 425px){
         max-width:100%;
-        margin-inline: 5px;
+        margin-inline: 10px;
     }
 
     @media only screen and  (min-width: 426px) and (max-width:1024px){
-        max-width: 45%;
+        max-width: 47%;
     }
     `
 export const SContent = styled(CardContent)`
