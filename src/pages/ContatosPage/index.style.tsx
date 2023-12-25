@@ -108,6 +108,8 @@ display: flex;
 
     @media only screen and  (min-width: 426px) and (max-width:1024px){
       width: 100%;
+      justify-content: center;
+    align-items: center;
     padding: 5px;
     }
 `
