@@ -9,6 +9,14 @@ import {
   font-size : 90px;
   font-weight: bolder;
   margin-block: 30px;
+  @media only screen and  (max-width: 425px){
+        font-size: 35px;
+        margin-block: 10px;
+    }
+
+    @media only screen and  (min-width: 426px) and (max-width:1024px){
+        font-size: 40px;
+    }
 `
 
 export const SProjetos = styled.div`
@@ -24,6 +32,13 @@ export const SCards = styled.div`
     flex-wrap: wrap;
     gap: 30px;
     margin-left:40px;
+    @media only screen and  (max-width: 425px){
+        margin-left:0;
+    }
+    @media only screen and  (max-width: 425px){
+        margin-left:0;
+    }
+
 `
 
 
@@ -31,6 +46,14 @@ export const SCard = styled(Card)`
     max-width:380px;
     border:3px solid #341d08;
     padding: 15px;
+    @media only screen and  (max-width: 425px){
+        max-width:100%;
+        margin-inline: 5px;
+    }
+
+    @media only screen and  (min-width: 426px) and (max-width:1024px){
+        max-width: 45%;
+    }
     `
 export const SContent = styled(CardContent)`
     width: 100%;

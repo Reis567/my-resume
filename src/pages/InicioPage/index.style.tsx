@@ -31,6 +31,9 @@ export const SDivImg = styled.div`
         max-height: 400px;
         display: flex;
         justify-content:center;
+        margin-right: 30px;
+        width: 420px;
+        height: 450px;
 
     }
 
@@ -73,6 +76,10 @@ export const STitle1 = styled.h2`
   @media only screen and  (max-width: 425px){
         font-size: 25px;
     }
+
+    @media only screen and  (min-width: 426px) and (max-width:1024px){
+        font-size: 30px;
+    }
 `
 
 export const STitle2 = styled.h2`
@@ -81,12 +88,18 @@ export const STitle2 = styled.h2`
   @media only screen and  (max-width: 425px){
         font-size: 40px;
     }
+    @media only screen and  (min-width: 426px) and (max-width:1024px){
+        font-size: 60px;
+    }
 `
 export const STitle3 = styled.h2`
       font-size : 40px;
   font-weight: bolder;
   @media only screen and  (max-width: 425px){
         font-size: 27px;
+    }
+    @media only screen and  (min-width: 426px) and (max-width:1024px){
+        font-size: 30px;
     }
 `
 
