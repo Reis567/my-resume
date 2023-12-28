@@ -58,6 +58,20 @@ const Projetos: React.FC = () => {
       githubLink: 'https://github.com/Reis567/chat-django',
     },
     {
+      title: 'Portifolio em React',
+      description: 'Este meu portifólio é inteiramente feito em React !',
+      technologies: ['React', 'HTML5', 'CSS3', 'JavaScript', 'Tailwind'],
+      image: '/projetos/portifolio.JPG',
+      githubLink: 'https://github.com/Reis567/resume-react',
+    },
+    {
+      title: 'API Node',
+      description: 'Api Node.js para gerênciamento de um banco de dados contendo cidades e moradores , com autenticação de usuários',
+      technologies: ['Node','Typescript','PostgreSQL'],
+      image: '/projetos/apiNode.png',
+      githubLink: 'https://github.com/Reis567/node-people-register',
+    },
+    {
       title: 'Marketplace',
       description: 'Marketplace com login e cadastro de usuários, além de comunicação entre vendedor e comprador',
       technologies: ['Python', 'Django', 'Tailwind', 'HTML5', 'CSS3', 'JavaScript'],
@@ -86,13 +100,7 @@ const Projetos: React.FC = () => {
       githubLink: 'https://github.com/Reis567/ecommerce-django',
     },
 
-    {
-      title: 'API Node',
-      description: 'Api Node.js para gerênciamento de um banco de dados contendo cidades e moradores , com autenticação de usuários',
-      technologies: ['Node','Typescript','PostgreSQL'],
-      image: '/projetos/apiNode.png',
-      githubLink: 'https://github.com/Reis567/node-people-register',
-    },
+
     {
       title: 'CRUD de contatos em React',
       description: 'CRUD de contatos em React, com opção de diversos filtros e estatísticas',
@@ -108,13 +116,7 @@ const Projetos: React.FC = () => {
       githubLink: 'https://codepen.io/reis567/pen/PoXpxed',
     },
 
-    {
-      title: 'Aplicativo web de pesquisa de imagens',
-      description: 'Aplicativo web de pesquisa de imagens',
-      technologies: ['HTML5', 'CSS3', 'JavaScript'],
-      image: '/projetos/pesquisaimg.PNG',
-      githubLink: 'https://codepen.io/reis567/pen/yLGywjB',
-    },
+
 
     {
       title: 'Pagina de Login e Registro',
