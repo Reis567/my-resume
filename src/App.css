@@ -10,6 +10,21 @@
 #root {
   min-height: 100vh;
 }
+body::-webkit-scrollbar {
+  width: 15px;
+
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--brown);
+  border-radius: 3px;
+}
+
+/* Personalização da barra de rolagem para navegadores Gecko (Firefox) */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--brown); 
+}
 
 .nav-btn{
   visibility: hidden;
