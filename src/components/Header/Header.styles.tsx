@@ -44,10 +44,26 @@ export const Nav = styled.nav<{isOpen:boolean}>`
 
 
 export const SLink = styled(Link)`
-margin: 0 2rem;
-color: #f7f2ee;
-font-weight: bolder;
-font-size: 20px;
+  margin: 0 2rem;
+  color: #f7f2ee;
+  font-weight: bolder;
+  font-size: 20px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: " ";
+    width: 0;
+    height: 2px;
+    background: #f7f2ee;
+    bottom: -20%;
+    left: 0;
+    transition: width 0.3s ease-in-out; 
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
 `;
 
 export const NavTitle = styled.h3`
