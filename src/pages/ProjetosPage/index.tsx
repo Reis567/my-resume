@@ -65,7 +65,7 @@ const Projetos: React.FC = () => {
       githubLink: 'https://github.com/Reis567/resume-react',
     },
     {
-      title: 'API Node',
+      title: 'Urban pulse API',
       description: 'Api Node.js para gerênciamento de um banco de dados contendo cidades e moradores , com autenticação de usuários',
       technologies: ['Node','Typescript','PostgreSQL'],
       image: '/projetos/apiNode.png',
@@ -77,6 +77,15 @@ const Projetos: React.FC = () => {
       technologies: ['Python', 'Django', 'Tailwind', 'HTML5', 'CSS3', 'JavaScript'],
       image: '/projetos/marketplace.PNG',
       githubLink: 'https://github.com/Reis567/marketplace-django',
+    },
+    
+
+    {
+      title: 'Class Vision API',
+      description: 'Api em Node.js e Typescript com autenticação de usuários , CRUD Completo de salas de aula e Disciplinas ',
+      technologies: ['Node','Typescript','PostgreSQL'],
+      image: '/projetos/classvision.PNG',
+      githubLink: 'https://github.com/Reis567/class_vision',
     },
     {
       title: 'Lista de Tarefas',
@@ -117,14 +126,6 @@ const Projetos: React.FC = () => {
     },
 
 
-
-    {
-      title: 'Pagina de Login e Registro',
-      description: 'Pagina de Login e Registro',
-      technologies: ['HTML5', 'CSS3', 'JavaScript'],
-      image: '/projetos/logreg.PNG',
-      githubLink: 'https://codepen.io/reis567/pen/zYMBdWa',
-    },
     {
       title: 'Gerador de senha forte',
       description: 'Gerador de senha forte',
