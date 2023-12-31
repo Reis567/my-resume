@@ -133,6 +133,14 @@ const Projetos: React.FC = () => {
       image: '/projetos/passgen.PNG',
       githubLink: 'https://codepen.io/reis567/pen/OJrBJOp',
     },
+    
+    {
+      title: 'Gerador QR code',
+      description: 'Gerador QR code',
+      technologies: ['HTML5', 'CSS3', 'JavaScript'],
+      image: '/projetos/pixel.png',
+      githubLink: 'https://github.com/Reis567/qr-gen',
+    },
   ];
 
   const mapTechToIcon = (technologies: string[]) => {
