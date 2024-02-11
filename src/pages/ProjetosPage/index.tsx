@@ -8,6 +8,7 @@ const techIcons: TechIcons = {
   Python: 'devicon-python-plain',
   Django: 'devicon-django-plain',
   PostgreSQL: 'devicon-postgresql-plain',
+  MySQL: 'devicon-mysql-plain',
   HTML5: 'devicon-html5-plain',
   CSS3: 'devicon-css3-plain',
   JavaScript: 'devicon-javascript-plain',
@@ -17,11 +18,20 @@ const techIcons: TechIcons = {
   'Node': 'devicon-nodejs-plain',
   Docker:'devicon-docker-plain',
   Typescript:'devicon-typescript-plain',
+  Java:'devicon-java-plain',
+  SpringBoot:'devicon-spring-plain',
 };
 
 const Projetos: React.FC = () => {
 
   const projetosData = [
+    {
+      title:  'Sistema Backend para gerenciamento de estacionamentos , inclui gerenciamento de vagas e de cliente , com armazenamento em Banco de dados MySQL',
+      description: 'Sistema backend para gerenciamento de estacionamentos , inclui gerenciamento de vagas e de cliente , com armazenamento em Banco de dados MySQL',
+      technologies: ['Java', 'SpringBoot', 'MySQL'],
+      image: '/projetos/api.png',
+      githubLink: 'https://github.com/Reis567/park-api',
+    },
     {
       title: 'Salas de chat de comunicação simultânea',
       description: 'Salas de chat de comunicação simultânea com Django channels e Websocket (Js)',
@@ -68,7 +78,7 @@ const Projetos: React.FC = () => {
       title: 'Urban pulse API',
       description: 'Api Node.js para gerênciamento de um banco de dados contendo cidades e moradores , com autenticação de usuários',
       technologies: ['Node','Typescript','PostgreSQL'],
-      image: '/projetos/apiNode.png',
+      image: '/projetos/api.png',
       githubLink: 'https://github.com/Reis567/node-people-register',
     },
     {
@@ -84,7 +94,7 @@ const Projetos: React.FC = () => {
       title: 'Class Vision API',
       description: 'Api em Node.js e Typescript com autenticação de usuários , CRUD Completo de salas de aula e Disciplinas ',
       technologies: ['Node','Typescript','PostgreSQL'],
-      image: '/projetos/classvision.PNG',
+      image: '/projetos/api.png',
       githubLink: 'https://github.com/Reis567/class_vision',
     },
     {
