@@ -18,6 +18,14 @@ export const ExperienceItemS = styled.div`
 border-radius: 30px;
 width: 650px;
 padding: 10px;
+
+@media only screen and  (max-width: 425px){
+    width: 100%;
+    }
+
+    @media only screen and  (min-width: 426px) and (max-width:1024px){
+        width: 650px;
+    }
 `;
 export const TitleS = styled.h4`
   font-size : 90px;
@@ -40,24 +48,31 @@ export const SubTitleS = styled.div`
     align-items: center ;
     gap: 10px;
     @media only screen and  (max-width: 425px){
-        font-size: 11px;
+        gap: 0px;
+        flex-direction: column  ;
+        margin-block: 10px;
     }
 
     @media only screen and  (min-width: 426px) and (max-width:1024px){
-        font-size: 15px;
+        gap: 10px;
     }
 `
 export const ParagrafS = styled.li`
     padding: 5px;
     list-style-type: disc;
     color: #000000;
+    @media only screen and  (max-width: 425px){
+        font-size: 13px;
+    }
+
+
     `
 
 export const CompanyS = styled.p`
   font-size : 50px;
   font-weight: bolder;
   @media only screen and  (max-width: 425px){
-        font-size: 17px;
+        font-size: 25px;
     }
 
     @media only screen and  (min-width: 426px) and (max-width:1024px){
@@ -71,7 +86,7 @@ export const PositionS = styled.h5`
   font-size: 25px;
 
   @media only screen and  (max-width: 425px){
-        font-size: 14px;
+        font-size: 16px;
     }
 
     @media only screen and  (min-width: 426px) and (max-width:1024px){
