@@ -5,6 +5,7 @@ import './index.css'
 
 import Inicio from './pages/InicioPage';
 import Contatos from './pages/ContatosPage';
+import Experiencia from './pages/ExpericenciaPage';
 import Sobre from './pages/SobrePage';
 import Projetos from './pages/ProjetosPage';
 
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Inicio/>
+      },
+      {
+        path:"experiencia",
+        element:<Experiencia/>
       },
       {
         path:"contatos",
