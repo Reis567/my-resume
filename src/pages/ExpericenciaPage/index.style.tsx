@@ -39,6 +39,13 @@ export const SubTitleS = styled.div`
     justify-content: center;
     align-items: center ;
     gap: 10px;
+    @media only screen and  (max-width: 425px){
+        font-size: 11px;
+    }
+
+    @media only screen and  (min-width: 426px) and (max-width:1024px){
+        font-size: 15px;
+    }
 `
 export const ParagrafS = styled.li`
     padding: 5px;
@@ -51,11 +58,10 @@ export const CompanyS = styled.p`
   font-weight: bolder;
   @media only screen and  (max-width: 425px){
         font-size: 17px;
-        margin-block: 10px;
     }
 
     @media only screen and  (min-width: 426px) and (max-width:1024px){
-        font-size: 22px;
+        font-size: 28px;
     }
 `;
 
@@ -63,11 +69,26 @@ export const PositionS = styled.h5`
   font-weight: bold;
   color: #000000;
   font-size: 25px;
+
+  @media only screen and  (max-width: 425px){
+        font-size: 14px;
+    }
+
+    @media only screen and  (min-width: 426px) and (max-width:1024px){
+        font-size: 19px;
+    }
 `;
 
 
 export const DateS = styled.p`
   color: #000000;
   font-size: 20px;
+  @media only screen and  (max-width: 425px){
+        font-size: 14px;
+    }
+
+    @media only screen and  (min-width: 426px) and (max-width:1024px){
+        font-size: 19px;
+    }
 `;
 
