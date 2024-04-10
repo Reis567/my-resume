@@ -47,6 +47,7 @@ export const SubTitleS = styled.div`
     justify-content: center;
     align-items: center ;
     gap: 10px;
+    margin-block: 10px;
     @media only screen and  (max-width: 425px){
         gap: 0px;
         flex-direction: column  ;
