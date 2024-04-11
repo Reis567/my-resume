@@ -8,10 +8,13 @@ const Sobre: React.FC = () => {
   // Estado para armazenar as pontuações de cada tecnologia
   const [skills] = useState({
     Django: 4,
-    SpringBoot:4,
-    'Django Rest Framework': 3,
+    'Django Rest Framework': 4,
+    SpringBoot:3,
     Node: 3,
+    Pandas: 3,
+    BeautifulSoup: 3,
     React: 2,
+    Scrapy:2,
     Next: 1,
     TypeScript: 3,
     PostgreSQL: 2,
