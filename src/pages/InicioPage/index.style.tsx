@@ -6,6 +6,10 @@ export const Simg = styled.img`
     @media only screen and  (max-width: 425px){
         display: none;
     }
+    @media only screen and  (min-width: 426px) and (max-width:1024px){
+        width: 100%;
+        height: 80%;
+    }
 `
 export const SDivImg = styled.div`
     margin-top:150px;
@@ -32,8 +36,9 @@ export const SDivImg = styled.div`
         display: flex;
         justify-content:center;
         margin-right: 30px;
-        width: 420px;
-        height: 450px;
+        width: 55%;
+        height:65%;
+        border-radius:50%   ;
 
     }
 
