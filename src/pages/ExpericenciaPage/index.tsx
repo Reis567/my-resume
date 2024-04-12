@@ -17,14 +17,7 @@ const Experiencia: React.FC = () => {
             
             Responsável pela criação e manutenção de sistemas usando o framework Django. Isso incluiu a concepção, desenvolvimento e implementação de aplicativos web robustos e escaláveis
             </ParagrafS>
-            <ParagrafS>
-            Manutenção e administração de servidores Linux, garantindo sua estabilidade e segurança. Envolvendo configuração, monitoramento e resolução de problemas para garantir a operação contínua dos sistemas.
-            </ParagrafS>
-
-            <ParagrafS>
-            Instalações completas de máquinas Linux, desde a configuração inicial do sistema operacional até a configuração avançada do servidor, incluindo a implementação de certificados HTTPS para garantir a segurança das comunicações
-            </ParagrafS>
-
+            
             <ParagrafS>
             Utilização o Python para realizar webscraping, coletando dados de várias fontes da web. Envolve a escrita de scripts personalizados para extrair informações relevantes de diferentes sites de forma automatizada.
             </ParagrafS>
@@ -32,6 +25,10 @@ const Experiencia: React.FC = () => {
             <ParagrafS>
             Encarregado do desenvolvimento e manutenção de scripts em Python para automatizar e melhorar a eficiência operacional.
             </ParagrafS>
+            <ParagrafS>
+            Manutenção e administração de servidores Linux, garantindo sua estabilidade e segurança. Envolvendo configuração, monitoramento e resolução de problemas para garantir a operação contínua dos , incluindo a implementação de certificados HTTPS para garantir a segurança das comunicações.
+            </ParagrafS>
+
 
 
       </ExperienceItemS>
