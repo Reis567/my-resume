@@ -14,6 +14,7 @@ const Sobre: React.FC = () => {
     Pandas: 3,
     BeautifulSoup: 3,
     React: 2,
+    'Gin Web Framework':2,
     Scrapy:2,
     Next: 1,
     TypeScript: 3,
