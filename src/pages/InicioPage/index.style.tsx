@@ -14,7 +14,7 @@ export const Simg = styled.img`
 export const SDivImg = styled.div`
     margin-top:150px;
     max-height:500px;
-    height:500px;
+    min-height:350px;
     width:380px;
     max-width:380px;
     background:#341d08;
@@ -37,8 +37,8 @@ export const SDivImg = styled.div`
         justify-content:center;
         margin-right: 30px;
         width: 55%;
-        height:65%;
-        border-radius:50%   ;
+        height:55%;
+        border-radius:50%;
 
     }
 
