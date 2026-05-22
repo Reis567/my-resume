@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
+import { ThemeProvider } from './contexts/ThemeContext'
+import { LanguageProvider } from './contexts/LanguageContext'
 
 import Inicio from './pages/InicioPage';
 import Contatos from './pages/ContatosPage';
@@ -46,6 +48,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <ThemeProvider>
+      <LanguageProvider>
+        <RouterProvider router={router}/>
+      </LanguageProvider>
+    </ThemeProvider>
   </React.StrictMode>,
 )

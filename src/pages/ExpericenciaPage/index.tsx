@@ -1,37 +1,59 @@
 import React from 'react';
-import {ExperienceContainerS,ExperienceItemS,TitleS,PositionS,CompanyS,DateS,SubTitleS,ParagrafS} from './index.style'
-
+import { CalendarDays } from 'lucide-react';
+import { useReveal } from '@/hooks/useReveal';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { rich } from '@/i18n/rich';
+import {
+  ExperienceContainerS,
+  EyebrowS,
+  TitleS,
+  TimelineS,
+  ExperienceItemS,
+  SubTitleS,
+  CompanyS,
+  PositionS,
+  DateS,
+  ListS,
+  ParagrafS,
+  DomainsHeadS,
+  DomainsS,
+  DomainPillS,
+} from './index.style';
 
 const Experiencia: React.FC = () => {
+  const { t } = useLanguage();
+  const item = useReveal<HTMLElement>();
+
   return (
     <ExperienceContainerS>
-      <TitleS>Experiência Profissional</TitleS>
-      <ExperienceItemS>
-        <CompanyS>Bugarin Tecnologia</CompanyS>
-        <SubTitleS>
+      <EyebrowS>{t.experiencia.eyebrow}</EyebrowS>
+      <TitleS>{t.experiencia.title}</TitleS>
 
-        <PositionS>Desenvolvedor Backend</PositionS>
-        <DateS>Março/2024 - até o momento</DateS>
-        </SubTitleS>
-            <ParagrafS>
-            
-            Responsável pela criação e manutenção de sistemas usando o framework Django. Isso incluiu a concepção, desenvolvimento e implementação de aplicativos web robustos e escaláveis
-            </ParagrafS>
-            
-            <ParagrafS>
-            Utilização o Python para realizar webscraping, coletando dados de várias fontes da web. Envolve a escrita de scripts personalizados para extrair informações relevantes de diferentes sites de forma automatizada.
-            </ParagrafS>
+      <TimelineS>
+        <ExperienceItemS ref={item.ref} className={`reveal ${item.inView ? 'is-visible' : ''}`}>
+          <CompanyS>{t.experiencia.company}</CompanyS>
+          <SubTitleS>
+            <PositionS>{t.experiencia.position}</PositionS>
+            <DateS>
+              <CalendarDays size={15} />
+              {t.experiencia.date}
+            </DateS>
+          </SubTitleS>
 
-            <ParagrafS>
-            Encarregado do desenvolvimento e manutenção de scripts em Python para automatizar e melhorar a eficiência operacional.
-            </ParagrafS>
-            <ParagrafS>
-            Manutenção e administração de servidores Linux, garantindo sua estabilidade e segurança. Envolvendo configuração, monitoramento e resolução de problemas para garantir a operação contínua dos , incluindo a implementação de certificados HTTPS para garantir a segurança das comunicações.
-            </ParagrafS>
+          <ListS>
+            {t.experiencia.responsibilities.map((item, i) => (
+              <ParagrafS key={i}>{rich(item)}</ParagrafS>
+            ))}
+          </ListS>
 
-
-
-      </ExperienceItemS>
+          <DomainsHeadS>{t.experiencia.domainsHead}</DomainsHeadS>
+          <DomainsS>
+            {t.experiencia.domains.map((d) => (
+              <DomainPillS key={d}>{d}</DomainPillS>
+            ))}
+          </DomainsS>
+        </ExperienceItemS>
+      </TimelineS>
     </ExperienceContainerS>
   );
 };

@@ -1,12 +1,66 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="https://avatars.githubusercontent.com/u/87450674?v=4" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <title>Matheus dos reis</title>
+    <meta name="theme-color" content="#341d08" />
+    <meta name="author" content="Matheus dos Reis" />
+    <meta
+      name="description"
+      content="Desenvolvedor Full-Stack. Sistemas em produção para órgãos públicos, empresas e institutos de pesquisa."
+    />
 
+    <!-- Open Graph / compartilhamento -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Matheus dos Reis — Desenvolvedor Full-Stack" />
+    <meta
+      property="og:description"
+      content="Desenvolvedor Full-Stack. Sistemas em produção para órgãos públicos, empresas e institutos de pesquisa."
+    />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/87450674?v=4" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Matheus dos Reis — Desenvolvedor Full-Stack" />
+    <meta
+      name="twitter:description"
+      content="Full-Stack Developer · sistemas em produção para governo, empresas e institutos de pesquisa."
+    />
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/87450674?v=4" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+    <title>Matheus dos Reis — Desenvolvedor Full-Stack</title>
+    <script>
+      // Aplica tema e idioma antes da renderização para evitar flash (FOUC).
+      (function () {
+        try {
+          var params = new URLSearchParams(window.location.search);
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+          var forcedTheme = params.get('theme');
+          var storedTheme = localStorage.getItem('theme');
+          var theme =
+            (forcedTheme === 'dark' || forcedTheme === 'light' ? forcedTheme : null) ||
+            storedTheme ||
+            (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+
+          var forcedLang = params.get('lang');
+          var storedLang = localStorage.getItem('lang');
+          var navLang =
+            navigator.language && navigator.language.toLowerCase().indexOf('pt') === 0 ? 'pt' : 'en';
+          var lang =
+            (forcedLang === 'pt' || forcedLang === 'en' ? forcedLang : null) ||
+            storedLang ||
+            navLang;
+          document.documentElement.setAttribute('lang', lang === 'pt' ? 'pt-BR' : 'en');
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

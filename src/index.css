@@ -1,76 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* ── Constantes de marca (iguais nos dois temas) ── */
+    --cream: #f7f2ee;
+    --brown: #341d08;
+    --brown-soft: #5c3d1f;
+    --amber: #b9762e;
+    --amber-soft: #d49a55;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
- 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
- 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
- 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
- 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
- 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
- 
+    /* ── Tokens semânticos — TEMA CLARO ── */
+    --bg: #f7f2ee;
+    --surface: #fffdfa;
+    --surface-2: #f1e7d8;
+    --text-strong: #341d08;
+    --text: #5c3d1f;
+    --text-muted: #6b5640;
+    --border: #ddccb4;
+    --border-soft: #e7dac6;
+    --shadow: 52 29 8;
+
+    /* aurora (mesh) — claro */
+    --aurora-1: rgba(185, 118, 46, 0.22);
+    --aurora-2: rgba(92, 61, 31, 0.16);
+    --aurora-3: rgba(212, 154, 85, 0.18);
+    --aurora-opacity: 0.85;
+
+    /* tokens shadcn (componentes ui/) */
+    --background: 36 38% 95%;
+    --foreground: 28 73% 8%;
+    --card: 40 60% 99%;
+    --card-foreground: 28 73% 8%;
+    --popover: 40 60% 99%;
+    --popover-foreground: 28 73% 8%;
+    --primary: 28 73% 12%;
+    --primary-foreground: 36 38% 95%;
+    --secondary: 34 36% 88%;
+    --secondary-foreground: 28 73% 12%;
+    --muted: 34 30% 90%;
+    --muted-foreground: 30 18% 35%;
+    --accent: 30 60% 45%;
+    --accent-foreground: 36 38% 97%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
- 
-    --radius: 0.5rem;
+    --border-hsl: 34 32% 84%;
+    --input: 34 32% 84%;
+    --ring: 30 60% 45%;
+    --radius: 0.9rem;
   }
- 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
- 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
- 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
- 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
- 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
- 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
- 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
- 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
- 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+
+  /* ── Tokens semânticos — TEMA ESCURO ── */
+  [data-theme='dark'] {
+    --bg: #160f07;
+    --surface: #221809;
+    --surface-2: #2d2113;
+    --text-strong: #f7f2ee;
+    --text: #e7d8c4;
+    --text-muted: #b6a283;
+    --border: #3a2912;
+    --border-soft: #2f2110;
+    --amber: #d68f3e;
+    --amber-soft: #e7ad63;
+    --shadow: 0 0 0;
+
+    --aurora-1: rgba(214, 143, 62, 0.20);
+    --aurora-2: rgba(122, 79, 109, 0.16);
+    --aurora-3: rgba(185, 118, 46, 0.22);
+    --aurora-opacity: 1;
+
+    --background: 30 45% 6%;
+    --foreground: 36 38% 95%;
+    --card: 30 42% 9%;
+    --card-foreground: 36 38% 95%;
+    --popover: 30 42% 9%;
+    --popover-foreground: 36 38% 95%;
+    --primary: 36 38% 95%;
+    --primary-foreground: 28 73% 8%;
+    --secondary: 30 30% 16%;
+    --secondary-foreground: 36 38% 95%;
+    --muted: 30 25% 14%;
+    --muted-foreground: 34 20% 70%;
+    --accent: 32 62% 54%;
+    --accent-foreground: 30 45% 8%;
+    --border-hsl: 30 30% 18%;
+    --input: 30 30% 18%;
+    --ring: 32 62% 54%;
   }
 }
- 
+
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border-hsl));
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+  html[data-theme='dark'] {
+    color-scheme: dark;
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    overflow-x: hidden;
+  }
+}
+
+* {
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Aurora / mesh gradient animado (camada de fundo fixa) ── */
+.aurora {
+  position: fixed;
+  inset: -20vmax;
+  z-index: -1;
+  pointer-events: none;
+  opacity: var(--aurora-opacity);
+  background:
+    radial-gradient(38vmax 38vmax at 18% 12%, var(--aurora-1), transparent 60%),
+    radial-gradient(34vmax 34vmax at 85% 8%, var(--aurora-3), transparent 60%),
+    radial-gradient(40vmax 40vmax at 70% 80%, var(--aurora-2), transparent 62%);
+  filter: blur(8px);
+  animation: aurora-drift 26s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes aurora-drift {
+  0% {
+    transform: translate3d(-3%, -2%, 0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate3d(3%, 2%, 0) rotate(8deg) scale(1.08);
+  }
+  100% {
+    transform: translate3d(-2%, 3%, 0) rotate(-6deg) scale(1.04);
+  }
+}
+
+/* ── Barra de rolagem ── */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--amber);
+  border-radius: 99px;
+  border: 3px solid var(--bg);
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--brown-soft);
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--amber) var(--bg);
+}
+
+::selection {
+  background: var(--amber);
+  color: #2a1707;
+}
+
+/* ── Acessibilidade: foco visível ── */
+:focus-visible {
+  outline: 3px solid var(--amber);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ── Botão do menu mobile ── */
+.nav-btn {
+  visibility: hidden;
+  opacity: 0;
+  font-size: 26px;
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.nav-close-btn {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  color: var(--cream);
+}
+@media only screen and (max-width: 1024px) {
+  .nav-btn {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+/* ── Scroll reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* stagger: filhos diretos entram em cascata */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.stagger.is-visible > * {
+  opacity: 1;
+  transform: none;
+}
+/* stagger-fade: cascata só de opacidade (deixa o transform livre p/ tilt) */
+.stagger-fade > * {
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.stagger-fade.is-visible > * {
+  opacity: 1;
+}
+.stagger.is-visible > *:nth-child(1), .stagger-fade.is-visible > *:nth-child(1) { transition-delay: 0.04s; }
+.stagger.is-visible > *:nth-child(2), .stagger-fade.is-visible > *:nth-child(2) { transition-delay: 0.10s; }
+.stagger.is-visible > *:nth-child(3), .stagger-fade.is-visible > *:nth-child(3) { transition-delay: 0.16s; }
+.stagger.is-visible > *:nth-child(4), .stagger-fade.is-visible > *:nth-child(4) { transition-delay: 0.22s; }
+.stagger.is-visible > *:nth-child(5), .stagger-fade.is-visible > *:nth-child(5) { transition-delay: 0.28s; }
+.stagger.is-visible > *:nth-child(6), .stagger-fade.is-visible > *:nth-child(6) { transition-delay: 0.34s; }
+.stagger.is-visible > *:nth-child(7), .stagger-fade.is-visible > *:nth-child(7) { transition-delay: 0.40s; }
+.stagger.is-visible > *:nth-child(8), .stagger-fade.is-visible > *:nth-child(8) { transition-delay: 0.46s; }
+.stagger.is-visible > *:nth-child(n + 9), .stagger-fade.is-visible > *:nth-child(n + 9) { transition-delay: 0.5s; }
+
+/* ── Animações utilitárias ── */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes shimmer-text {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* transição suave ao alternar tema (ativada por ~0.5s via JS) */
+.theme-transition,
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease,
+    fill 0.4s ease, box-shadow 0.4s ease !important;
+  transition-delay: 0s !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .aurora {
+    animation: none;
+  }
+  .reveal,
+  .stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

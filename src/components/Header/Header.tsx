@@ -1,40 +1,71 @@
-import React, { useState } from 'react';
-import {FaBars, FaTimes} from 'react-icons/fa'
-import { Container,Nav,NavTitle,SLink } from './Header.styles.tsx';
+import React, { useEffect, useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { Container, Nav, NavTitle, SLink, Actions } from './Header.styles.tsx';
 import { Link } from 'react-router-dom';
+import ThemeToggle from '@/components/ThemeToggle/ThemeToggle';
+import LanguageToggle from '@/components/LanguageToggle/LanguageToggle';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Header: React.FC = () => {
-    const [isNavOpen, setIsNavOpen] = useState(false);
+  const { t } = useLanguage();
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-    const toggleNavBar = () => {
-      setIsNavOpen(!isNavOpen);
+  const closeNav = () => setIsNavOpen(false);
+  const toggleNavBar = () => setIsNavOpen((v) => !v);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  // bloqueia o scroll do body quando o menu mobile está aberto
+  useEffect(() => {
+    document.body.style.overflow = isNavOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
     };
-
+  }, [isNavOpen]);
 
   return (
-    <Container>
+    <Container scrolled={scrolled}>
+      <NavTitle>
+        <Link to="/" onClick={closeNav}>
+          <span className="mono">M</span>
+          Matheus dos Reis
+        </Link>
+      </NavTitle>
 
-    <NavTitle>
-      <Link to={"/"}>
-        Matheus dos Reis
-      </Link>
-    </NavTitle>
-    
-    <Nav isOpen={isNavOpen} as="div">
-        <SLink to="/" onClick={toggleNavBar}>Inicio</SLink>
-        <SLink to="/sobre" onClick={toggleNavBar}>Sobre</SLink>
-        <SLink to="/experiencia" onClick={toggleNavBar}>Experiência</SLink>
-        <SLink to="/projetos" onClick={toggleNavBar}>Projetos</SLink>
-        <SLink to="/contatos" onClick={toggleNavBar}>Contatos</SLink>
-        <button className='nav-btn nav-close-btn' onClick={toggleNavBar}>
-            <FaTimes/>
+      <Nav isOpen={isNavOpen}>
+        <SLink to="/" end onClick={closeNav}>
+          {t.nav.inicio}
+        </SLink>
+        <SLink to="/sobre" onClick={closeNav}>
+          {t.nav.sobre}
+        </SLink>
+        <SLink to="/experiencia" onClick={closeNav}>
+          {t.nav.experiencia}
+        </SLink>
+        <SLink to="/projetos" onClick={closeNav}>
+          {t.nav.projetos}
+        </SLink>
+        <SLink to="/contatos" onClick={closeNav}>
+          {t.nav.contatos}
+        </SLink>
+        <button className="nav-btn nav-close-btn" onClick={toggleNavBar} aria-label={t.aria.menuClose}>
+          <FaTimes />
         </button>
-    </Nav>
+      </Nav>
 
-    <button className='nav-btn' onClick={toggleNavBar}>
-            <FaBars/>
-    </button>
-
+      <Actions>
+        <LanguageToggle />
+        <ThemeToggle />
+        <button className="nav-btn" onClick={toggleNavBar} aria-label={t.aria.menuOpen}>
+          <FaBars />
+        </button>
+      </Actions>
     </Container>
   );
 };
