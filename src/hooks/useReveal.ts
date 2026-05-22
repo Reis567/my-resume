@@ -17,7 +17,10 @@ interface RevealOptions {
  *   <Section ref={ref} className={`reveal ${inView ? 'is-visible' : ''}`} />
  */
 export function useReveal<T extends HTMLElement = HTMLElement>(options: RevealOptions = {}) {
-  const { threshold = 0.18, rootMargin = '0px 0px -8% 0px', once = true } = options;
+  // threshold 0: dispara assim que qualquer parte entra (ajustado pelo rootMargin).
+  // Essencial no mobile, onde seções empilhadas ficam mais altas que a viewport
+  // e uma fração mínima visível nunca alcançaria um threshold maior.
+  const { threshold = 0, rootMargin = '0px 0px -8% 0px', once = true } = options;
   const ref = useRef<T | null>(null);
   const [inView, setInView] = useState(false);
 
